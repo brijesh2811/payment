@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(56,133,130);
+    background: linear-gradient(279deg, rgba(56,133,130,1) 0%, rgba(253,190,29,1) 52%, rgba(69,168,252,1) 100%);        
+    background-repeat: no-repeat;
+    background-size:auto;
+}
+.bg{
+    background-color: bisque;
+    width: 550px;
+    margin: 5rem 25rem;
+
+}
+.box_2 ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0px 12rem
+
+}
+.box_2 li{
+    list-style: none;
+}
+.box_1 h1{
+    min-width: 200px;
+    text-align: center;
+    color: darkcyan;
+    font-size: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px ;
+}
+.name, .cn{
+    min-width: 200px;
+    display: grid;
+    grid-column: auto;
+    max-width: fit-content;
+    margin: 20px 40px;
+    font-size: 25px;
+}
+.cn input, .name input{
+    padding: 6px 18rem 6px 10px;
+    border: 2px solid;
+    border-color: rgb(221, 221, 221);
+    border-radius:2px ;
+}
+.cn input::placeholder{
+    font-size: 25px;
+}
+.name input::placeholder{
+    font-size:15px
+}
+.d-v{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+}
+.date{
+    display: grid;
+    grid-column: auto;
+    margin-left: 40px;
+    font-size: 25px;
+}
+.date select{
+    padding: 5px 10px;
+    border: 2px solid;
+    border-color:rgb(221, 221, 221);
+    font-size: 15px;
+}
+.cvv{
+    display: grid;
+    grid-column: auto;
+    font-size: 25px;
+    margin-right: 15rem
+}
+.cvv input{
+    padding: 5px 10px;
+    border: 2px solid;
+    border-color: rgb(221, 221, 221);
+    font-size: 20px;
+    width: 100px;
+}
+.payment input{
+    background: rgb(156,46,177);
+    background: linear-gradient(90deg, rgba(156,46,177,1) 0%, rgba(8,164,204,1) 35%, rgba(99,149,214,1) 100%);
+    padding: 5px 12rem;
+    margin: 30px 40px;
+    font-size: 25px;
+    color: aliceblue;
+    border: none;
+}
+span{
+    color: red;
+    font-size: 10px;
+}

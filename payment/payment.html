@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <div class="bg">
+        <section class="sec_1">
+            <div class="container_1">
+                <div class="box_1">
+                    <h1>Payment</h1>
+                </div>
+            </div>
+        </section>
+        <section class="sec_2">
+            <div class="continer_2">
+                <div class="box_2">
+                    <ul>
+                        <li><img src="./master card.png" alt="master card"></li>
+                        <li><img src="./rupay.png" alt="rupay"></li>
+                        <li><img src="./amazon.png" alt="amazon"></li>
+                        <li><img src="./paypal.png" alt="paypal"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="sec_3">
+            <div class="container_3">
+                <div class="box_3">
+                    <form onclick="return validation()">
+                        <table>
+                            <tr class="cn">
+                                <td>Card Number</td>
+                                <td><input type="text" inputmode="numeric" maxlength="16"
+                                        placeholder="xxxx xxxx xxxx xxxx" id="cnumber" class="cnumber"></td>
+                                <td><span id="cnerror"></span></td>
+                            </tr>
+                            <tr class="name">
+                                <td>Holder Name</td>
+                                <td><input type="text" placeholder="Holder Name" id="hname"></td>
+                                <td><span id="hnerror"></span></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tbody class="d-v">
+                                <tr class="date">
+                                    <td>Date</td>
+                                    <td>
+                                        <select name="mm" id="month">
+                                            <option value="month">1</option>
+                                            <option value="month">2</option>
+                                            <option value="month">3</option>
+                                            <option value="month">4</option>
+                                            <option value="month">5</option>
+                                            <option value="month">6</option>
+                                            <option value="month">7</option>
+                                            <option value="month">8</option>
+                                            <option value="month">9</option>
+                                            <option value="month">10</option>
+                                            <option value="month">11</option>
+                                            <option value="month">12</option>
+                                        </select>
+                                        <select name="yyyy" id="year">
+                                            <option value="year">2024</option>
+                                            <option value="year">2025</option>
+                                            <option value="year">2026</option>
+                                            <option value="year">2027</option>
+                                            <option value="year">2028</option>
+                                            <option value="year">2029</option>
+                                            <option value="year">2030</option>
+                                            <option value="year">2031</option>
+                                            <option value="year">2032</option>
+                                            <option value="year">2033</option>
+                                            <option value="year">2034</option>
+                                            <option value="year">2035</option>
+                                            <option value="year">2036</option>
+                                            <option value="year">2037</option>
+                                            <option value="year">2038</option>
+                                            <option value="year">2039</option>
+                                            <option value="year">2040</option>
+                                            <option value="year">2041</option>
+                                            <option value="year">2042</option>
+                                            <option value="year">2043</option>
+                                            <option value="year">2044</option>
+                                            <option value="year">2045</option>
+                                            <option value="year">2046</option>
+                                            <option value="year">2047</option>
+                                            <option value="year">2048</option>
+                                            <option value="year">2049</option>
+                                            <option value="year">2050</option>
+                                        </select>
+                                    </td>
+                                    <td><span id="daterror"></span></td>
+                                </tr>
+                                <tr class="cvv">
+                                    <td>CVV</td>
+                                    <td><input type="password" typemode="numeric" maxlength="3" id="code"></td>
+                                    <td><span id="cvverror"></span></td>
+                                </tr>
+                            </tbody>
+                            <tr class="payment">
+                                <td><input type="button" value="Payment" id="payment" class="payment"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        let cnumber = document.getElementById("cnumber");
+        let hname = document.getElementById("hname");
+        let date = document.getElementsByClassName("date");
+        let code = document.getElementById("code");
+        console.log(cnumber, hname, date, code);
+
+        function validation() {
+            //card number
+            if (cnumber.value === "") {
+                console.log("enter the card number");
+                cnerror.innerHTML = "*Please enter the card number"
+            }
+            else {
+                cnerror.innerHTML = ""
+            }
+
+            //holder name error
+            if (hname.value === "") {
+                console.log("enter the card number");
+                hnerror.innerHTML = "*Please enter the holder name"
+            }
+            else {
+                hnerror.innerHTML = ""
+            }
+            
+            //date error
+            if(date.value===""){
+                console.log("enter the date");
+                daterror.innerHTML  = "*enter the date"
+            }
+            else{
+                daterror.innerHTML =""
+            }
+
+            // cvv code
+            if (code.value === "") {
+                console.log("enter the cvv number");
+                cvverror.innerHTML = "*enter CVV number"
+            }
+            else {
+                cvverror.innerHTML = ""
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
